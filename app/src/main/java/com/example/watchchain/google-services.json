@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "462543258918",
+    "project_id": "watchchain-99e51",
+    "storage_bucket": "watchchain-99e51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462543258918:android:da48dfbe2c01a53ac5ade7",
+        "android_client_info": {
+          "package_name": "com.example.watchchain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462543258918-jp1jsbb39esfah7ufbofsvrhthosoced.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.watchchain",
+            "certificate_hash": "303f3c2c702b2305743e1c0897a35d2c30b70350"
+          }
+        },
+        {
+          "client_id": "462543258918-nulti0devdndlr4mckrmhrlj766p53ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhRpjl1cL9qJquGqDEjVP6pGjMiq7GWEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462543258918-nulti0devdndlr4mckrmhrlj766p53ee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

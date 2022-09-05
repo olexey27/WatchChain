@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/createAccountFragment">
+
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.watchchain.ui.authentication.CreateAccountFragment"
+        android:label="CreateAccountFragment" />
+    <fragment
+        android:id="@+id/browserFragment"
+        android:name="com.example.watchchain.ui.BrowserFragment"
+        android:label="BrowserFragment" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.watchchain.ui.authentication.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.watchchain.ui.main.MainFragment"
+        android:label="MainFragment" />
+    <fragment
+        android:id="@+id/creatorProfileFragment"
+        android:name="com.example.watchchain.ui.CreatorProfileFragment"
+        android:label="CreatorProfileFragment" />
+</navigation>
