@@ -4,4 +4,5 @@ data class Nfts (
     val id: String = "",
     val name: String = "",
     val price: Boolean,
+    val imageRecource: Int
     )

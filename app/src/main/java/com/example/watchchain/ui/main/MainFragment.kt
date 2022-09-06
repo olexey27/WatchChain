@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.watchchain.R
+import com.example.watchchain.databinding.FragmentMainBinding
 import com.example.watchchain.ui.MainViewModel
 
 /**
@@ -18,7 +19,7 @@ import com.example.watchchain.ui.MainViewModel
  */
 class MainFragment : Fragment() {
 
-    private lateinit var binding: MainFragment
+    private lateinit var binding: FragmentMainBinding
 
     private val viewModel: MainViewModel by activityViewModels()
 
@@ -29,7 +30,9 @@ class MainFragment : Fragment() {
         container: ViewGroup?,
         saveInstanceState: Bundle?
     ): View {
-        binding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+
+        return binding.root
 
     }
 
@@ -46,8 +49,6 @@ class MainFragment : Fragment() {
                 }
             }
         )
-
-
 
 
     }
