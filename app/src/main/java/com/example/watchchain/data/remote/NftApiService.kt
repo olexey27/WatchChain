@@ -1,6 +1,5 @@
 package com.example.watchchain.data.remote
 
-import com.example.watchchain.data.datamodels.NftsList
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

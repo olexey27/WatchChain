@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.watchchain.data.datamodels.Nfts
+import com.example.watchchain.data.datamodels.Collector
 
-@Database(entities = [Nfts::class], version = 1)
+@Database(entities = [Collector::class], version = 1)
 abstract class NftsDatabase : RoomDatabase() {
 
     abstract val nftsDatabaseDao : NftsDatabaseDao

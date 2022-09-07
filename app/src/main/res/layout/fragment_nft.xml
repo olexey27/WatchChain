@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="TextView"
+            android:text="@string/collector1"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/id_collectore"

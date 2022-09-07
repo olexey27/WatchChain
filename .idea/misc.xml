@@ -6,9 +6,13 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/browser.xml" value="0.27388535031847133" />
-        <entry key="app/src/main/res/layout/collector.xml" value="0.5468033369561729" />
+        <entry key="app/src/main/res/layout/collector.xml" value="0.4980694980694981" />
+        <entry key="app/src/main/res/layout/collector_item.xml" value="0.5019455252918288" />
         <entry key="app/src/main/res/layout/create_account.xml" value="0.2887668750904225" />
         <entry key="app/src/main/res/layout/creator_profile.xml" value="0.4040937724866366" />
+        <entry key="app/src/main/res/layout/fragment_browser.xml" value="0.5051393296983507" />
+        <entry key="app/src/main/res/layout/fragment_collector.xml" value="0.31470947265625004" />
+        <entry key="app/src/main/res/layout/fragment_creator.xml" value="0.2958715596330275" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.238238525390625" />
         <entry key="app/src/main/res/layout/fragment_nft.xml" value="0.31789855957031254" />
         <entry key="app/src/main/res/layout/nft_list.xml" value="0.35448913574218777" />

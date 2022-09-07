@@ -6,7 +6,6 @@
     android:layout_width="180dp"
     android:layout_height="265dp"
     android:layout_margin="8dp"
-    android:alpha="1"
     app:barrierMargin="4dp"
     app:cardBackgroundColor="#EDF2F3"
     app:cardCornerRadius="10dp"
@@ -36,13 +35,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/img" />
 
         <TextView
             android:id="@+id/id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="#1"
+            android:text="@string/id1"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/nft_image3"
@@ -52,7 +51,7 @@
             android:id="@+id/id_collectore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="@string/nft1"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="1.222"
+            android:text="@string/price1"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -1,6 +1,21 @@
 <resources>
     <string name="app_name">Watch Chain</string>
 
+    <!--Collector-->
+    <string name="collector1">YugaLabs</string>
+
+    <!--Collection Name-->
+    <string name="collection1">Bored Ape Yacht Club</string>
+
+    <!--Nft Name-->
+    <string name="nft1">9477</string>
+
+    <!--Price-->
+    <string name="price1">74,3</string>
+
+    <!--Id-->
+    <string name="id1">#1</string>
+
     <string name="buy_button">Buy</string>
 </resources>
 
