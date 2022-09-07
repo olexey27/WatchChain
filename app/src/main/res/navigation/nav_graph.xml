@@ -11,7 +11,11 @@
     <fragment
         android:id="@+id/browserFragment"
         android:name="com.example.watchchain.ui.BrowserFragment"
-        android:label="BrowserFragment" />
+        android:label="BrowserFragment" >
+        <action
+            android:id="@+id/action_browserFragment_to_creatorProfileFragment"
+            app:destination="@id/creatorProfileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.watchchain.ui.authentication.SignInFragment"

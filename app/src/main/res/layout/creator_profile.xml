@@ -55,19 +55,30 @@
             android:id="@+id/collection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
             android:text="Collection"
             android:textColor="#FAFAFA"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="165dp"
-            tools:layout_editor_absoluteY="122dp" />
+            app:layout_constraintEnd_toEndOf="@+id/title_background"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toEndOf="@+id/profil_picture"
+            app:layout_constraintTop_toTopOf="@+id/title_background" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/collectore_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="166dp"
-            tools:layout_editor_absoluteY="154dp" />
+            android:layout_marginTop="8dp"
+            android:text="Avatar"
+            android:textColor="#FDFDFD"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/title_background"
+            app:layout_constraintEnd_toEndOf="@+id/title_background"
+            app:layout_constraintHorizontal_bias="0.035"
+            app:layout_constraintStart_toEndOf="@+id/profil_picture"
+            app:layout_constraintTop_toBottomOf="@+id/collection"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

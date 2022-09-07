@@ -10,7 +10,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.watchchain.R
 import com.example.watchchain.data.datamodels.Nfts
-import com.example.watchchain.ui.BrowserFragment
 
 class NftAdapter(
     private val dataset: List<Nfts>
@@ -18,7 +17,7 @@ class NftAdapter(
 
     class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val collection_name: TextView = view.findViewById(R.id.collection_name)
-        val collector: TextView = view.findViewById(R.id.collector)
+        val collector: TextView = view.findViewById(R.id.id_collectore)
         val nft_image: ImageView = view.findViewById(R.id.nft_image)
         val nft_image2: ImageView = view.findViewById(R.id.nft_image2)
         val nft_image3: ImageView = view.findViewById(R.id.nft_image3)
@@ -46,8 +45,12 @@ class NftAdapter(
 
         holder.nft_layout.setOnClickListener {
             holder.view.findNavController()
-                .navigate(BrowserFragmentDirection.act)
+                .navigate()
         }
+    }
+
+    override fun getItemCount(): Int {
+        return dataset.size
     }
     }
 }

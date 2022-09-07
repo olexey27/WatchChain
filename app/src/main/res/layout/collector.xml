@@ -89,7 +89,7 @@
             tools:text="Avatar" />
 
         <TextView
-            android:id="@+id/collector"
+            android:id="@+id/id_collectore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -113,7 +113,7 @@
             app:layout_constraintEnd_toEndOf="@+id/nft_image3"
             app:layout_constraintHorizontal_bias="0.517"
             app:layout_constraintStart_toStartOf="@+id/nft_image2"
-            app:layout_constraintTop_toBottomOf="@+id/collector"
+            app:layout_constraintTop_toBottomOf="@+id/id_collectore"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
@@ -121,7 +121,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             app:layout_constraintBottom_toTopOf="@+id/buy_button"
-            app:layout_constraintEnd_toStartOf="@+id/collector"
+            app:layout_constraintEnd_toStartOf="@+id/id_collectore"
             app:layout_constraintStart_toStartOf="@+id/collection_name"
             app:layout_constraintTop_toBottomOf="@+id/collection_name"
             tools:srcCompat="@tools:sample/avatars" />
