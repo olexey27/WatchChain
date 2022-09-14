@@ -35,7 +35,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/img" />
+            tools:srcCompat="@drawable/img3683" />
 
         <TextView
             android:id="@+id/id"

@@ -12,7 +12,7 @@ interface NftsDatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(nft: List<Collector>)
 
-    @androidx.room.Query("SELECT * FROM Nfts")
+    @androidx.room.Query("")
     fun getAll(): LiveData<List<Collector>>
 
 }

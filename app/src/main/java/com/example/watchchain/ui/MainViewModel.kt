@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.watchchain.data.Repository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -13,6 +14,19 @@ import com.google.firebase.firestore.FirebaseFirestore
 const val TAG = "MAINVIEWMODEL"
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val repo = Repository()
+
+    //collectors aus dem Repository laden
+    val collectors = repo.collectors
+
+    //nft aus dem Repository laden
+    val nft = repo.nft
+
+    //wird loadNft() des Repository aufgerufen
+    init {
+        repo.loadNft()
+    }
 
     //Kommunikationspunkt mit der Firestore Datenbank
     val db = FirebaseFirestore.getInstance()

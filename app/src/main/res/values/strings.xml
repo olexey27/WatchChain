@@ -3,18 +3,94 @@
 
     <!--Collector-->
     <string name="collector1">YugaLabs</string>
+    <string name="collector2">YugaLabs</string>
+    <string name="collector3">RTFKTCLONEXTM</string>
 
     <!--Collection Name-->
     <string name="collection1">Bored Ape Yacht Club</string>
+    <string name="collection2">Mutant Ape Yacht Club</string>
+    <string name="collection3">CLONE X - X TAKASHI MURAKAMI</string>
 
     <!--Nft Name-->
-    <string name="nft1">9477</string>
+    <string name="nft1">3683</string>
+    <string name="nft2">8922</string>
+    <string name="nft3">9611</string>
+    <string name="nft4">330</string>
+    <string name="nft5">4591</string>
+    <string name="nft6">1570</string>
+    <string name="nft7">6140</string>
+    <string name="nft8">622</string>
+    <string name="nft9">3651</string>
+    <string name="nft10">4704</string>
+    <!---->
+    <string name="nft11">10602</string>
+    <string name="nft12">26170</string>
+    <string name="nft13">24262</string>
+    <string name="nft14">2761</string>
+    <string name="nft15">790</string>
+    <string name="nft16">26958</string>
+    <string name="nft17">4852</string>
+    <string name="nft18">4777</string>
+    <string name="nft19">12200</string>
+    <string name="nft20">7642</string>
+    <!---->
+    <string name="nft21">CloneX #11984</string>
+    <string name="nft22">CloneX #8922</string>
+    <string name="nft23">CloneX #3602</string>
+    <string name="nft24">CloneX #8098</string>
+    <string name="nft25">CloneX #10115</string>
+    <string name="nft26">CloneX #19482</string>
+    <string name="nft27">CloneX #18164</string>
+    <string name="nft28">CloneX #6748</string>
+    <string name="nft29">CloneX #18373</string>
+    <string name="nft30">CloneX #2131</string>
 
     <!--Price-->
-    <string name="price1">74,3</string>
+    <string name="price1">73</string>
+    <string name="price2">73,25</string>
+    <string name="price3">73,9</string>
+    <string name="price4">74</string>
+    <string name="price5">78</string>
+    <string name="price6">79,9</string>
+    <string name="price7">84,2</string>
+    <string name="price8">89,5</string>
+    <string name="price9">93</string>
+    <string name="price10">98</string>
+    <!---->
+    <string name="price11">12,85</string>
+    <string name="price12">12,89</string>
+    <string name="price13">13</string>
+    <string name="price14">13</string>
+    <string name="price15">13,29</string>
+    <string name="price16">13,49</string>
+    <string name="price17">13,69</string>
+    <string name="price18">13,979</string>
+    <string name="price19">14</string>
+    <string name="price20">14</string>
+    <!---->
+    <string name="price21">5,7</string>
+    <string name="price22">5,7</string>
+    <string name="price23">5,75</string>
+    <string name="price24">5,97</string>
+    <string name="price25">5,99</string>
+    <string name="price26">6,18</string>
+    <string name="price27">6,2</string>
+    <string name="price28">6,2</string>
+    <string name="price29">6,3</string>
+    <string name="price30">6,4</string>
 
     <!--Id-->
     <string name="id1">#1</string>
+    <string name="id2">#2</string>
+    <string name="id3">#3</string>
+    <string name="id4">#4</string>
+    <string name="id5">#5</string>
+    <string name="id6">#6</string>
+    <string name="id7">#7</string>
+    <string name="id8">#8</string>
+    <string name="id9">#9</string>
+    <string name="id10">#10</string>
+
 
     <string name="buy_button">Buy</string>
 </resources>

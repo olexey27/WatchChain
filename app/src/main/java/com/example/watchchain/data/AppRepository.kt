@@ -14,9 +14,5 @@ class AppRepository (private val api: NftApi, private val database: NftsDatabase
     val collector: LiveData<List<Collector>> = database.nftsDatabaseDao.getAll()
 
     suspend fun getNft() {
-        withContext(Dispatchers.IO) {
-            val newNftsList = api.retrofitService.getNftsList().nft
-            database.nftsDatabaseDao.insertAll(newNftsList)
-        }
     }
 }

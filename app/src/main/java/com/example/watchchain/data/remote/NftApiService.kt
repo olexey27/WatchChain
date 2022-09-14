@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
 interface NftApiService {
 
     @GET()
-    suspend fun getNftsList(): NftsList
+    suspend fun getNftsList()
 }
 
 object NftApi {

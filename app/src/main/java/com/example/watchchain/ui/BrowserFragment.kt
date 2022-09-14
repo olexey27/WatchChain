@@ -28,6 +28,6 @@ class BrowserFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.nftList.adapter = CollectorAdapter()
+        binding.nftList.adapter = CollectorAdapter(viewModel.collectors)
     }
 }
