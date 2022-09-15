@@ -38,16 +38,6 @@
             tools:srcCompat="@drawable/img3683" />
 
         <TextView
-            android:id="@+id/id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/id1"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/nft_image3"
-            app:layout_constraintTop_toBottomOf="@+id/nft_image3" />
-
-        <TextView
             android:id="@+id/id_collectore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +45,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/id"
+            app:layout_constraintStart_toStartOf="@+id/nft_image3"
             app:layout_constraintTop_toBottomOf="@+id/nft_image3"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -65,8 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Price"
-            app:layout_constraintStart_toStartOf="@+id/id"
-            app:layout_constraintTop_toBottomOf="@+id/id" />
+            app:layout_constraintStart_toStartOf="@+id/id_collectore"
+            app:layout_constraintTop_toBottomOf="@+id/id_collectore" />
 
         <ImageView
             android:id="@+id/ethereum"

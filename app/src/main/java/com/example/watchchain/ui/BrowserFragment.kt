@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.watchchain.R
-import com.example.watchchain.adapter.CollectorAdapter
+import com.example.watchchain.adapter.BrowserAdapter
 import com.example.watchchain.databinding.FragmentBrowserBinding
 
 class BrowserFragment : Fragment() {
@@ -28,6 +28,6 @@ class BrowserFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.nftList.adapter = CollectorAdapter(viewModel.collectors)
+        binding.nftList.adapter = BrowserAdapter(viewModel.collectors)
     }
 }

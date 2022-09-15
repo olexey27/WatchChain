@@ -34,9 +34,9 @@
     <string name="nft19">12200</string>
     <string name="nft20">7642</string>
     <!---->
-    <string name="nft21">CloneX #11984</string>
-    <string name="nft22">CloneX #8922</string>
-    <string name="nft23">CloneX #3602</string>
+    <string name="nft21">CloneX #18404</string>
+    <string name="nft22">CloneX #12308</string>
+    <string name="nft23">CloneX #16919</string>
     <string name="nft24">CloneX #8098</string>
     <string name="nft25">CloneX #10115</string>
     <string name="nft26">CloneX #19482</string>
@@ -68,9 +68,9 @@
     <string name="price19">14</string>
     <string name="price20">14</string>
     <!---->
-    <string name="price21">5,7</string>
-    <string name="price22">5,7</string>
-    <string name="price23">5,75</string>
+    <string name="price21">2.776</string>
+    <string name="price22">1.230,8</string>
+    <string name="price23">1.000</string>
     <string name="price24">5,97</string>
     <string name="price25">5,99</string>
     <string name="price26">6,18</string>
@@ -78,18 +78,6 @@
     <string name="price28">6,2</string>
     <string name="price29">6,3</string>
     <string name="price30">6,4</string>
-
-    <!--Id-->
-    <string name="id1">#1</string>
-    <string name="id2">#2</string>
-    <string name="id3">#3</string>
-    <string name="id4">#4</string>
-    <string name="id5">#5</string>
-    <string name="id6">#6</string>
-    <string name="id7">#7</string>
-    <string name="id8">#8</string>
-    <string name="id9">#9</string>
-    <string name="id10">#10</string>
 
 
     <string name="buy_button">Buy</string>

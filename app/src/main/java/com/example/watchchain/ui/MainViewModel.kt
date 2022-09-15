@@ -1,7 +1,6 @@
 package com.example.watchchain.ui
 
 import android.app.Application
-import android.nfc.Tag
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -18,7 +17,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val repo = Repository()
 
     //collectors aus dem Repository laden
-    val collectors = repo.collectors
+    val collectors = repo.browsers
 
     //nft aus dem Repository laden
     val nft = repo.nft
