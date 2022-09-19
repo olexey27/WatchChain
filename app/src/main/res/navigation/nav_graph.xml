@@ -13,8 +13,8 @@
         android:name="com.example.watchchain.ui.BrowserFragment"
         android:label="BrowserFragment" >
         <action
-            android:id="@+id/action_browserFragment_to_creatorProfileFragment"
-            app:destination="@id/creatorProfileFragment" />
+            android:id="@+id/action_browserFragment_to_collectorFragment"
+            app:destination="@id/collectorFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -29,7 +29,15 @@
         android:name="com.example.watchchain.ui.main.MainFragment"
         android:label="MainFragment" />
     <fragment
-        android:id="@+id/creatorProfileFragment"
-        android:name="com.example.watchchain.ui.CreatorProfileFragment"
-        android:label="CreatorProfileFragment" />
+        android:id="@+id/collectorFragment"
+        android:name="com.example.watchchain.ui.CollectorFragment"
+        android:label="CollectorFragment" >
+        <action
+            android:id="@+id/action_collectorFragment_to_nftFragment"
+            app:destination="@id/nftFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nftFragment"
+        android:name="com.example.watchchain.ui.NftFragment"
+        android:label="NftFragment" />
 </navigation>

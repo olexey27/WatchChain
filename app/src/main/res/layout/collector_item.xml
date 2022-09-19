@@ -65,7 +65,7 @@
                 tools:srcCompat="@drawable/img8922" />
 
             <ImageView
-                android:id="@+id/nft_image3"
+                android:id="@+id/nft_view"
                 android:layout_width="70dp"
                 android:layout_height="144dp"
                 android:layout_marginStart="16dp"
@@ -92,7 +92,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/nft_image3"
+                app:layout_constraintEnd_toEndOf="@+id/nft_view"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/nft_image"
                 app:layout_constraintTop_toBottomOf="@+id/nft_image"
@@ -100,7 +100,7 @@
                 tools:text="@string/collection1" />
 
             <TextView
-                android:id="@+id/id_collectore"
+                android:id="@+id/id_collectore_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/collector1"

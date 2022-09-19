@@ -19,9 +19,9 @@ class BrowserAdapter(
     class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val nftImage: ImageView = view.findViewById(R.id.nft_image)
         val nftImage2: ImageView = view.findViewById(R.id.nft_image2)
-        val nftImage3: ImageView = view.findViewById(R.id.nft_image3)
+        val nftImage3: ImageView = view.findViewById(R.id.nft_view)
         val collectionName: TextView = view.findViewById(R.id.collection_name)
-        val idCollector: TextView = view.findViewById(R.id.id_collectore)
+        val idCollector: TextView = view.findViewById(R.id.id_collectore_view)
         val imageLogo: ImageView = view.findViewById(R.id.image_logo)
         val collectorLayout: ConstraintLayout = view.findViewById(R.id.CollectorLayout)
     }
