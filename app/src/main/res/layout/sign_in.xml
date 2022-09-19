@@ -8,15 +8,16 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/bbackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <ImageView
             android:id="@+id/logo_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:text="Watch Chain"
+            android:layout_width="180dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/watchchain"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -51,60 +52,63 @@
             app:layout_constraintStart_toStartOf="@+id/email_address_edit"
             app:layout_constraintTop_toBottomOf="@+id/email_address_edit" />
 
-        <Button
-            android:id="@+id/login_button"
+        <ImageButton
+            android:id="@+id/sign_in_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginTop="40dp"
-            android:text="Login"
+            android:background="@drawable/signin"
             app:layout_constraintEnd_toEndOf="@+id/password_text"
             app:layout_constraintStart_toStartOf="@+id/password_text"
             app:layout_constraintTop_toBottomOf="@+id/password_text" />
 
         <ImageButton
             android:id="@+id/facebook_imageButton"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="70dp"
             android:background="@drawable/facebook"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/google_imageButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_button"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/google_imageButton"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/google"
             app:layout_constraintEnd_toStartOf="@+id/apple_imageButton"
             app:layout_constraintStart_toEndOf="@+id/facebook_imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/login_button" />
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/apple_imageButton"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/apple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/google_imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/login_button"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/have_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="75dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="30dp"
             android:text="Dont't have a account yet?"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +118,7 @@
             android:id="@+id/sign_up_textButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="75dp"
             android:text="Sign up?"
             android:textSize="16sp"

@@ -47,6 +47,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.2.2'
+    implementation 'com.google.firebase:firebase-auth:21.0.8'
 
     //implementation 'com.google.android.gms:play-services-ads:21.2.0'
     //implementation 'com.google.android.ads:mediation-test-suite:2.0.0'
@@ -97,5 +98,5 @@ dependencies {
 
     // Firebase UI
     implementation 'com.firebaseui:firebase-ui-auth:8.0.1'
-    implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+    //implementation 'com.firebaseui:firebase-ui-database:8.0.1'
 }

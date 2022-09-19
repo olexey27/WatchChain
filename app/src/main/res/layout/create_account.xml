@@ -8,19 +8,20 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/bbackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <TextView
+        <ImageView
             android:id="@+id/logo_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:text="Watch Chain"
+            android:layout_width="180dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/watchchain"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +32,7 @@
             android:layout_marginTop="70dp"
             android:ems="12"
             android:hint="Email"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="@+id/logo_title"
             app:layout_constraintHorizontal_bias="0.497"
@@ -45,7 +46,7 @@
             android:layout_marginTop="32dp"
             android:ems="12"
             android:hint="Confirm Password"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="@id/password_edit"
             app:layout_constraintHorizontal_bias="0.452"
@@ -59,7 +60,7 @@
             android:layout_marginTop="32dp"
             android:ems="12"
             android:hint="Password"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="@+id/email_address_edit"
             app:layout_constraintHorizontal_bias="0.0"
@@ -87,7 +88,8 @@
             android:background="@drawable/facebook"
             app:layout_constraintEnd_toStartOf="@+id/google_imageButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/create_account_button" />
+            app:layout_constraintTop_toBottomOf="@+id/create_account_button"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/google_imageButton"
@@ -97,7 +99,8 @@
             android:background="@drawable/google"
             app:layout_constraintEnd_toStartOf="@+id/apple_imageButton"
             app:layout_constraintStart_toEndOf="@+id/facebook_imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/create_account_button" />
+            app:layout_constraintTop_toBottomOf="@+id/create_account_button"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/apple_imageButton"
@@ -108,14 +111,15 @@
             android:background="@drawable/apple"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/google_imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/create_account_button" />
+            app:layout_constraintTop_toBottomOf="@+id/create_account_button"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/have_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="84dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:text="Already have an account?"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +129,7 @@
             android:id="@+id/sign_in_textButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="84dp"
             android:text="Sign In"
             android:textSize="16sp"

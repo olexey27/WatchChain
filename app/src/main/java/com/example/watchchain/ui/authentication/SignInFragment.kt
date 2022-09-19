@@ -38,7 +38,7 @@ class SignInFragment : Fragment() {
         }
 
 
-        binding.loginButton.setOnClickListener {
+        binding.signInButton.setOnClickListener {
             val email = binding.emailAddressEdit.text.toString()
             val password = binding.passwordText.text.toString()
 
@@ -47,17 +47,6 @@ class SignInFragment : Fragment() {
             }
         }
 
-        viewModel.currentUser.observe(
-            viewLifecycleOwner,
-            Observer {
-                if (it != null) {
-                  //  Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-                    AlertDialog.Builder(requireContext())
-                        .create()
-                        .show()
-                }
-            }
-        )
         viewModel.currentUser.observe(
             viewLifecycleOwner,
             Observer {
