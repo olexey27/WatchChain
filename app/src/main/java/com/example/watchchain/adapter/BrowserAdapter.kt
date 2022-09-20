@@ -36,16 +36,16 @@ class BrowserAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
-        holder.nftImage.setImageResource(item.nftImage)
+        holder.nftImage.setImageResource(item.nftImage1)
         holder.nftImage2.setImageResource(item.nftImage2)
         holder.nftImage3.setImageResource(item.nftImage3)
-        holder.collectionName.text = item.collectionName.uppercase()
-        holder.idCollector.text = item.idCollector.uppercase()
+        holder.collectionName.text = item.collectionName.toString().uppercase()
+        holder.idCollector.text = item.idCollector.toString().uppercase()
         holder.imageLogo.setImageResource(item.imageLogo)
 
         holder.collectorLayout.setOnClickListener {
             holder.view.findNavController()
-                .navigate(BrowserFragmentDirections.actionBrowserFragmentToCreatorProfileFragment())
+                .navigate(BrowserFragmentDirections.actionBrowserFragmentToCollectorFragment())
         }
     }
 

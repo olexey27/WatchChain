@@ -5,13 +5,15 @@
     <string name="collector1">YugaLabs</string>
     <string name="collector2">YugaLabs</string>
     <string name="collector3">RTFKTCLONEXTM</string>
+    <string name="collector4">CyberBrokersDeployer</string>
 
     <!--Collection Name-->
     <string name="collection1">Bored Ape Yacht Club</string>
     <string name="collection2">Mutant Ape Yacht Club</string>
     <string name="collection3">CLONE X - X TAKASHI MURAKAMI</string>
+    <string name="collection4">Cyber Brokers</string>
 
-    <!--Nft Name-->
+    <!--Bored Ape Yacht Club-->
     <string name="nft1">3683</string>
     <string name="nft2">8922</string>
     <string name="nft3">9611</string>
@@ -22,29 +24,6 @@
     <string name="nft8">622</string>
     <string name="nft9">3651</string>
     <string name="nft10">4704</string>
-    <!---->
-    <string name="nft11">10602</string>
-    <string name="nft12">26170</string>
-    <string name="nft13">24262</string>
-    <string name="nft14">2761</string>
-    <string name="nft15">790</string>
-    <string name="nft16">26958</string>
-    <string name="nft17">4852</string>
-    <string name="nft18">4777</string>
-    <string name="nft19">12200</string>
-    <string name="nft20">7642</string>
-    <!---->
-    <string name="nft21">CloneX #18404</string>
-    <string name="nft22">CloneX #12308</string>
-    <string name="nft23">CloneX #16919</string>
-    <string name="nft24">CloneX #8098</string>
-    <string name="nft25">CloneX #10115</string>
-    <string name="nft26">CloneX #19482</string>
-    <string name="nft27">CloneX #18164</string>
-    <string name="nft28">CloneX #6748</string>
-    <string name="nft29">CloneX #18373</string>
-    <string name="nft30">CloneX #2131</string>
-
     <!--Price-->
     <string name="price1">73</string>
     <string name="price2">73,25</string>
@@ -56,7 +35,19 @@
     <string name="price8">89,5</string>
     <string name="price9">93</string>
     <string name="price10">98</string>
-    <!---->
+
+    <!--Mutant Ape Yacht Club-->
+    <string name="nft11">10602</string>
+    <string name="nft12">26170</string>
+    <string name="nft13">24262</string>
+    <string name="nft14">2761</string>
+    <string name="nft15">790</string>
+    <string name="nft16">26958</string>
+    <string name="nft17">4852</string>
+    <string name="nft18">4777</string>
+    <string name="nft19">12200</string>
+    <string name="nft20">7642</string>
+    <!--Price-->
     <string name="price11">12,85</string>
     <string name="price12">12,89</string>
     <string name="price13">13</string>
@@ -67,7 +58,19 @@
     <string name="price18">13,979</string>
     <string name="price19">14</string>
     <string name="price20">14</string>
-    <!---->
+
+    <!--CLONE X - X TAKASHI MURAKAMI-->
+    <string name="nft21">CloneX #18404</string>
+    <string name="nft22">CloneX #12308</string>
+    <string name="nft23">CloneX #16919</string>
+    <string name="nft24">CloneX #8098</string>
+    <string name="nft25">CloneX #10115</string>
+    <string name="nft26">CloneX #19482</string>
+    <string name="nft27">CloneX #18164</string>
+    <string name="nft28">CloneX #6748</string>
+    <string name="nft29">CloneX #18373</string>
+    <string name="nft30">CloneX #2131</string>
+    <!--Price-->
     <string name="price21">2.776</string>
     <string name="price22">1.230,8</string>
     <string name="price23">1.000</string>
@@ -79,6 +82,15 @@
     <string name="price29">6,3</string>
     <string name="price30">6,4</string>
 
+    <!--Cyber Brokers-->
+    <string name="nft31">Sora Decayed</string>
+    <string name="nft32">Scapalio</string>
+    <string name="nft33">Murmur</string>
+
+    <!--Price-->
+    <string name="price31">150</string>
+    <string name="price32">79,99</string>
+    <string name="price33">69,42</string>
 
     <string name="buy_button">Buy</string>
 </resources>

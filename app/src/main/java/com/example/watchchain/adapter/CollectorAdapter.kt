@@ -39,9 +39,9 @@ class CollectorAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
-        holder.collectorName.text = context.resources.getString(item.collectoreName)
-        holder.collectorLogo.setImageResource(item.collectoreLogo)
-        holder.collectorTitlePic.setImageResource(item.collectoreTitlePic)
+        holder.collectorName.text = context.resources.getString(item.collectorName)
+        holder.collectorLogo.setImageResource(item.collectorLogo)
+        holder.collectorTitlePic.setImageResource(item.collectorTitlePic)
 
         holder.textView.text = context.resources.getString(item.nameNft)
         holder.priceView.text = context.resources.getString(item.price)
