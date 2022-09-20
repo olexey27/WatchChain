@@ -85,6 +85,13 @@ class Repository {
             Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.sora_decayed,R.string.nft31,R.string.price31,R.string.collector4),
             Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.scapalio,R.string.nft32,R.string.price32,R.string.collector4),
             Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.murmur,R.string.nft33,R.string.price33,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.halios,R.string.nft34,R.string.price34,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.agilefrommorrison,R.string.nft35,R.string.price35,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.billiechaney,R.string.nft36,R.string.price36,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.rampart,R.string.nft37,R.string.price37,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.daggerseasoned,R.string.nft38,R.string.price38,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.eden,R.string.nft39,R.string.price39,R.string.collector4),
+            Nft(R.string.collector4,R.drawable.cyberbrokerslogo,R.drawable.cyberbrokerstitle,R.drawable.xena_rustler,R.string.nft40,R.string.price40,R.string.collector4),
         )
     }
 }

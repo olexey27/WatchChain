@@ -86,11 +86,25 @@
     <string name="nft31">Sora Decayed</string>
     <string name="nft32">Scapalio</string>
     <string name="nft33">Murmur</string>
+    <string name="nft34">Halios</string>
+    <string name="nft35">Agile From Morrison</string>
+    <string name="nft36">Billie Chaney</string>
+    <string name="nft37">Rampart</string>
+    <string name="nft38">Dagger Seasoned</string>
+    <string name="nft39">Eden</string>
+    <string name="nft40">Xena Rustler</string>
 
     <!--Price-->
     <string name="price31">150</string>
     <string name="price32">79,99</string>
     <string name="price33">69,42</string>
+    <string name="price34">69</string>
+    <string name="price35">69</string>
+    <string name="price36">65</string>
+    <string name="price37">50</string>
+    <string name="price38">45</string>
+    <string name="price39">28,99</string>
+    <string name="price40">25</string>
 
     <string name="buy_button">Buy</string>
 </resources>
