@@ -1,30 +1,41 @@
-package com.example.watchchain.ui
+package com.example.watchchain.ui.authentication
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.watchchain.data.Repository
+import com.example.watchchain.data.local.getDatabase
+import com.example.watchchain.data.remote.NftApi
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.launch
 
-const val TAG = "MAINVIEWMODEL"
+private const val TAG = "MainViewModel"
+
+enum class ApiStatus {LOADING, ERROR, DONE}
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repo = Repository()
+    private val database = getDatabase(application)
 
-    //collectors aus dem Repository laden
-    val collectors = repo.browsers
+    private val repository = Repository(NftApi, database)
 
-    //nft aus dem Repository laden
-    val nft = repo.nft
+    val nfts = repository.nftList
 
-    //wird loadNft() des Repository aufgerufen
+    private val _loading = MutableLiveData<ApiStatus>()
+    val loading: LiveData<ApiStatus>
+    get() = _loading
+
     init {
-        repo.loadNft()
+        loadData()
+    }
+
+    private fun loadData() {
+        viewModelScope.launch {  }
     }
 
     //Kommunikationspunkt mit der Firestore Datenbank

@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.watchchain.R
 import com.example.watchchain.databinding.FragmentMainBinding
-import com.example.watchchain.ui.MainViewModel
+import com.example.watchchain.ui.authentication.MainViewModel
 
 /**
  * Das MainFragment ist der Begrüßungsscreen unserer App

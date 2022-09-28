@@ -11,6 +11,7 @@ import com.example.watchchain.R
 import com.example.watchchain.adapter.BrowserAdapter
 import com.example.watchchain.adapter.CollectorAdapter
 import com.example.watchchain.databinding.FragmentCollectorBinding
+import com.example.watchchain.ui.authentication.MainViewModel
 
 class CollectorFragment : Fragment() {
 

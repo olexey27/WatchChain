@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import com.example.watchchain.R
 import com.example.watchchain.adapter.BrowserAdapter
 import com.example.watchchain.databinding.FragmentBrowserBinding
+import com.example.watchchain.ui.authentication.MainViewModel
 
 /**
  * Das MainFragment ist der Browser unserer App
