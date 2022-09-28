@@ -1,6 +1,5 @@
 package com.example.watchchain.ui.authentication
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.watchchain.R
 import com.example.watchchain.databinding.SignInBinding
-import com.example.watchchain.ui.MainViewModel
 
 class SignInFragment : Fragment() {
 

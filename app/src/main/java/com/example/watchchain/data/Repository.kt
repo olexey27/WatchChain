@@ -1,9 +1,6 @@
 package com.example.watchchain.data
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.example.watchchain.R
-import com.example.watchchain.data.datamodels.Browser
 import com.example.watchchain.data.datamodels.Nft
 import com.example.watchchain.data.local.NftsDatabase
 import com.example.watchchain.data.remote.NftApi

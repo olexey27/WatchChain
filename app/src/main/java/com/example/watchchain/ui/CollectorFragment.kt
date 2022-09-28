@@ -8,10 +8,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.watchchain.R
-import com.example.watchchain.adapter.BrowserAdapter
 import com.example.watchchain.adapter.CollectorAdapter
 import com.example.watchchain.databinding.FragmentCollectorBinding
 import com.example.watchchain.ui.authentication.MainViewModel
+
+private const val TAG = "CollectoreFragment"
 
 class CollectorFragment : Fragment() {
 
@@ -29,8 +30,9 @@ class CollectorFragment : Fragment() {
         return binding.root
     }
 
-    //override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-     //   binding.nftsRecycler.adapter = CollectorAdapter()
-    //}
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val nft = viewModel.nfts.value?.find { it.collectorName == }
+    }
 
 }

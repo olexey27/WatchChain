@@ -1,24 +1,61 @@
 package com.example.watchchain.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.cardview.widget.CardView
+import androidx.core.net.toUri
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.watchchain.R
+import coil.load
 import com.example.watchchain.data.datamodels.Nft
-import com.example.watchchain.ui.CollectorFragmentDirections
+import com.example.watchchain.databinding.CollectorItemBinding
+import com.example.watchchain.ui.BrowserFragmentDirections
 
 class CollectorAdapter(
     private val context: Context,
-    private val dataset: List<Nft>
 ) : RecyclerView.Adapter<CollectorAdapter.ItemViewHolder>() {
 
-    class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    private var dataset = emptyList<Nft>()
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun submitList(list: List<Nft>) {
+        dataset = list
+        notifyDataSetChanged()
+    }
+
+    class ItemViewHolder(val binding: CollectorItemBinding) : RecyclerView.ViewHolder(binding.root)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+
+        val binding = CollectorItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+
+        return ItemViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+        val item = dataset[position]
+
+        val imgUri = item.nftImage.toUri().buildUpon().scheme("http").build()
+
+        holder.binding.nftImage1.load(imgUri)
+        holder.binding.nftImage2.load(imgUri)
+        holder.binding.nftImage3.load(imgUri)
+        holder.binding.collectionName.text = item.collectionName
+        holder.binding.idCollectoreView.text = item.collectorName
+
+        val imgUri2 = item.collectorLogo.toUri().buildUpon().scheme("http").build()
+
+        holder.binding.imageLogo.load(imgUri2)
+
+        holder.binding.CollectorCard.setOnClickListener {
+            holder.itemView.findNavController()
+                .navigate(BrowserFragmentDirections.actionBrowserFragmentToCollectorFragment())
+        }
+
+    }
+
+    /*class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val collectorName: TextView = view.findViewById(R.id.collector_name)
         val collectorLogo: ImageView = view.findViewById(R.id.profil_picture)
         val collectorTitlePic: ImageView = view.findViewById(R.id.title_background)
@@ -54,5 +91,5 @@ class CollectorAdapter(
 
     override fun getItemCount(): Int {
         return dataset.size
-    }
+    }*/
 }
