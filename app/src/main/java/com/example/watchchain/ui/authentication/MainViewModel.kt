@@ -35,7 +35,20 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun loadData() {
-        viewModelScope.launch {  }
+        viewModelScope.launch {
+            _loading.value = ApiStatus.LOADING
+            try {
+                repository.getNfts()
+                _loading.value = ApiStatus.DONE
+            } catch (e:Exception) {
+                Log.e(TAG,"Error loading Data from API: $e")
+                if (nfts.value.isNullOrEmpty()) {
+                    _loading.value = ApiStatus.ERROR
+                } else {
+                    _loading.value = ApiStatus.DONE
+                }
+            }
+        }
     }
 
     //Kommunikationspunkt mit der Firestore Datenbank
