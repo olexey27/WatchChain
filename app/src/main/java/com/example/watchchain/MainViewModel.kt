@@ -62,6 +62,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val currentUser: LiveData<FirebaseUser?>
     get() = _currentUser
 
+
     // hier wird versucht einen User zu erstellen um diesen anschließend auch gleich einzuloggen
     fun signUp(email: String, password: String) {
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {

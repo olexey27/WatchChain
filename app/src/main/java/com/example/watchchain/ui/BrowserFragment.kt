@@ -10,7 +10,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.SnapHelper
-import com.example.watchchain.MainActivity
 import com.example.watchchain.R
 import com.example.watchchain.adapter.CollectorAdapter
 import com.example.watchchain.databinding.FragmentBrowserBinding
@@ -34,6 +33,7 @@ class BrowserFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_browser, container, false)
 
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/createAccountFragment">
+    app:startDestination="@id/browserFragment">
 
     <fragment
         android:id="@+id/createAccountFragment"
@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_browserFragment_to_collectorFragment"
             app:destination="@id/collectorFragment" />
+        <argument
+            android:name="frameName"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -24,10 +27,6 @@
             android:id="@+id/action_signInFragment_to_createAccountFragment"
             app:destination="@id/createAccountFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.watchchain.ui.main.MainFragment"
-        android:label="MainFragment" />
     <fragment
         android:id="@+id/collectorFragment"
         android:name="com.example.watchchain.ui.CollectorFragment"
@@ -40,4 +39,12 @@
         android:id="@+id/nftFragment"
         android:name="com.example.watchchain.ui.NftFragment"
         android:label="NftFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.watchchain.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.watchchain.ui.FavoriteFragment"
+        android:label="FavoriteFragment" />
 </navigation>

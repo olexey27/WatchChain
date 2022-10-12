@@ -10,8 +10,11 @@
         android:id="@+id/profil_pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="116dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_title"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -25,74 +28,114 @@
         app:srcCompat="@drawable/wallet" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/receiveImg"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/ic_baseline_download_for_offline_24"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="292dp" />
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profil_pic"
+        app:srcCompat="@drawable/ic_baseline_download_for_offline_24" />
 
     <TextView
         android:id="@+id/receive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="352dp"
         android:text="Receive"
         android:textColor="#006DFE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/receiveImg"
+        app:layout_constraintStart_toStartOf="@+id/receiveImg"
+        app:layout_constraintTop_toBottomOf="@+id/receiveImg"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/moneyImg"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/ic_baseline_monetization_on_24"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="292dp" />
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/sendMoneyImg"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/receiveImg"
+        app:layout_constraintTop_toBottomOf="@+id/profil_pic"
+        app:srcCompat="@drawable/ic_baseline_monetization_on_24" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/buyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="354dp"
         android:text="Buy"
         android:textColor="#006DFE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/moneyImg"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/moneyImg"
+        app:layout_constraintTop_toBottomOf="@+id/moneyImg"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/sendMoneyImg"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/ic_baseline_outbound_24"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="292dp" />
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="91dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profil_pic"
+        app:srcCompat="@drawable/ic_baseline_outbound_24" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/send_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="354dp"
         android:text="Send"
         android:textColor="#006DFE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sendMoneyImg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sendMoneyImg"
+        app:layout_constraintTop_toBottomOf="@+id/sendMoneyImg"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tokenText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="TOKENS"
         android:textColor="#006DFE"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="425dp" />
+        app:layout_constraintEnd_toEndOf="@+id/send_money"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="@+id/receive"
+        app:layout_constraintTop_toBottomOf="@+id/buyText" />
+
+    <ImageView
+        android:id="@+id/tokenImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/ethereum"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="473dp" />
+
+    <TextView
+        android:id="@+id/budget"
+        android:layout_width="171dp"
+        android:layout_height="41dp"
+        android:text="2578.39"
+        android:textColor="#3C3C3C"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="512dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

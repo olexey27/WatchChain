@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/navigation_wallet"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+        android:title="Wallet" />
 
+    <item
+        android:id="@+id/navigation_collector"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Collector" />
+
+    <item
+        android:id="@+id/navigation_Favorite"
+        android:icon="@drawable/ic_baseline_collections_24"
+        android:title="Favorite" />
 
 </menu>

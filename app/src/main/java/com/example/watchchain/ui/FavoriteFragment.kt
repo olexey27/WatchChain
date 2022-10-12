@@ -7,17 +7,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.observe
 import com.example.watchchain.R
-import com.example.watchchain.adapter.CollectorAdapter
-import com.example.watchchain.databinding.FragmentCollectorBinding
+import com.example.watchchain.databinding.FragmentFavoriteBinding
 import com.example.watchchain.ui.authentication.MainViewModel
 
-private const val TAG = "CollectoreFragment"
+private const val TAG = "FavotiteFragment"
 
-class CollectorFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
-    private lateinit var binding: FragmentCollectorBinding
+    private lateinit var binding: FragmentFavoriteBinding
 
     private val viewModel: MainViewModel by activityViewModels()
 
@@ -26,15 +24,10 @@ class CollectorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_collector, container, false)
-
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_favorite, container, false)
         return binding.root
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        binding.collectedText.setImageResource(R.drawable.collectedtext)
 
     }
-
 }

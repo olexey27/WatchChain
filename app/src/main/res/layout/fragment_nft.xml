@@ -93,6 +93,7 @@
             android:layout_height="86dp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="25dp"
+            android:backgroundTint="#00FFFFFF"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@+id/background_image"
             app:layout_constraintEnd_toEndOf="parent"

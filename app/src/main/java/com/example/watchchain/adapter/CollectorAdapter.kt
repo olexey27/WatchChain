@@ -55,6 +55,8 @@ class CollectorAdapter(
 
     }
 
+
+
     /*class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val collectorName: TextView = view.findViewById(R.id.collector_name)
         val collectorLogo: ImageView = view.findViewById(R.id.profil_picture)
@@ -87,9 +89,9 @@ class CollectorAdapter(
             val navController = holder.view.findNavController()
             navController.navigate(CollectorFragmentDirections.actionCollectorFragmentToNftFragment())
         }
-    }
+    }*/
 
     override fun getItemCount(): Int {
         return dataset.size
-    }*/
+    }
 }
