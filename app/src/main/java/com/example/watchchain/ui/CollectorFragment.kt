@@ -33,7 +33,6 @@ class CollectorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = FragmentCollectorBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -54,9 +53,6 @@ class CollectorFragment : Fragment() {
 
                 val imgUri1 = collection.collectorTitleImg.toUri().buildUpon().scheme("http").build()
                 binding.titleBackground.load(imgUri1)
-
-
-
             }
         )
     }

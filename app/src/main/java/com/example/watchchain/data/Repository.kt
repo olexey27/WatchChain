@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.watchchain.data.datamodels.Collector
 import com.example.watchchain.data.datamodels.Nft
-import com.example.watchchain.data.local.NftsDatabase
 import com.example.watchchain.data.remote.NftApi
 
 class Repository(private val nftApi: NftApi) {

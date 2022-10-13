@@ -21,8 +21,12 @@ class NftFragment : Fragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
 
-    private var nftid = ""
+    var nft = ""
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let { nft = "nftName" }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,15 +38,6 @@ class NftFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val nft = viewModel.nfts.value?.find { it.collectorName == nftid }
-
-        if (nft != null) {
-            Log.d(TAG,"found NFT")
-
-            val imgUri = nft.nftImage.toUri().buildUpon().scheme("http").build()
-            binding.detailCardView.load(imgUri) {
-                placeholder(R.drawable.img3683)
-            }
-        }
+        viewModel
     }
 }

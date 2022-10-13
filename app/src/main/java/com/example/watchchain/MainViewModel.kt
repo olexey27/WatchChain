@@ -7,8 +7,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.watchchain.data.Repository
-import com.example.watchchain.data.datamodels.Nft
-import com.example.watchchain.data.local.getDatabase
 import com.example.watchchain.data.remote.NftApi
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
