@@ -10,20 +10,23 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.watchchain.R
-import com.example.watchchain.databinding.CreateAccountBinding
+import com.example.watchchain.databinding.FragmentCreateAccountBinding
 
+/**
+ * SignUpFragment enthält das UI um einen neuen User zu registrieren
+ */
 class CreateAccountFragment : Fragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
 
-    private  lateinit var binding: CreateAccountBinding
+    private  lateinit var binding: FragmentCreateAccountBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.create_account, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_create_account, container, false)
 
         return binding.root
     }
@@ -31,7 +34,7 @@ class CreateAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.signInTextButton.setOnClickListener {
+        binding.signupCancel.setOnClickListener {
             findNavController().navigateUp()
         }
 
@@ -43,20 +46,20 @@ class CreateAccountFragment : Fragment() {
             viewLifecycleOwner,
             Observer {
                 if (it != null) {
-                    findNavController().navigate(R.id.mainFragment)
+                    findNavController().navigate(R.id.browserFragment)
                 }
             }
         )
     }
 
     private fun singUp() {
-        val email = binding.emailAddressEdit.text.toString()
+        val email = binding.signInEmailEdit.text.toString()
         val password1 = binding.passwordEdit.text.toString()
         val password2 = binding.confirmPasswordEdit.text.toString()
 
 
         if (!email.isNullOrEmpty() && !password1.isNullOrEmpty() && password1 == password2) {
-            viewModel.signUp(email, password1)
+            viewModel.signUp(email, password1,)
         }
     }
 }

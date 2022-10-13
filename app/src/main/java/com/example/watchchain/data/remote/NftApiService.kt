@@ -1,5 +1,6 @@
 package com.example.watchchain.data.remote
 
+import com.example.watchchain.data.datamodels.Collector
 import com.example.watchchain.data.datamodels.Nft
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -22,7 +23,7 @@ private val retrofit = Retrofit.Builder()
 interface NftApiService {
 
     @GET("data.json")
-    suspend fun getNfts(): List<Nft>
+    suspend fun getNfts(): List<Collector>
 }
 
 object NftApi {

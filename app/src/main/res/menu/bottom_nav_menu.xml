@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_collector"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="Collector" />
+        android:title="Profil" />
 
     <item
         android:id="@+id/navigation_Favorite"

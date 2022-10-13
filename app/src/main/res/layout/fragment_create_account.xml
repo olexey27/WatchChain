@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/email_address_edit"
+            android:id="@+id/sign_in_email_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
@@ -62,56 +62,40 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="@+id/email_address_edit"
+            app:layout_constraintEnd_toEndOf="@+id/sign_in_email_edit"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/email_address_edit"
-            app:layout_constraintTop_toBottomOf="@+id/email_address_edit" />
-
-        <Button
-            android:id="@+id/create_account_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="#2BF37E"
-            android:text="Create an account"
-            app:layout_constraintEnd_toEndOf="@+id/password_edit"
-            app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintStart_toStartOf="@+id/password_edit"
-            app:layout_constraintTop_toBottomOf="@id/confirm_password_edit" />
+            app:layout_constraintStart_toStartOf="@+id/sign_in_email_edit"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_email_edit" />
 
         <ImageButton
             android:id="@+id/facebook_imageButton"
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginBottom="60dp"
             android:background="@drawable/facebook"
-            app:layout_constraintEnd_toStartOf="@+id/google_imageButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/create_account_button"
+            app:layout_constraintBottom_toTopOf="@+id/have_acc"
+            app:layout_constraintStart_toStartOf="@+id/create_AccountButton"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/google_imageButton"
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginBottom="60dp"
             android:background="@drawable/google"
-            app:layout_constraintEnd_toStartOf="@+id/apple_imageButton"
-            app:layout_constraintStart_toEndOf="@+id/facebook_imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/create_account_button"
+            app:layout_constraintBottom_toTopOf="@+id/have_acc"
+            app:layout_constraintEnd_toEndOf="@+id/create_AccountButton"
+            app:layout_constraintStart_toStartOf="@+id/create_AccountButton"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/apple_imageButton"
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="60dp"
             android:background="@drawable/apple"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/google_imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/create_account_button"
+            app:layout_constraintBottom_toTopOf="@+id/have_acc"
+            app:layout_constraintEnd_toEndOf="@+id/create_AccountButton"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -119,23 +103,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="84dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginBottom="27dp"
             android:text="Already have an account?"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/google_imageButton" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/sign_in_textButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
             android:layout_marginEnd="84dp"
+            android:layout_marginBottom="27dp"
             android:text="Sign In"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/google_imageButton" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/create_AccountButton"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/confirm_password_edit"
+            app:layout_constraintStart_toStartOf="@+id/confirm_password_edit"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_password_edit"
+            app:srcCompat="@drawable/createacc" />
+
+        <ImageButton
+            android:id="@+id/signup_cancel"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backbutton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

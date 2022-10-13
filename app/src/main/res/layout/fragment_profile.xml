@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profilTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bbackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/billiechaney"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profilTitle"
+            app:layout_constraintStart_toStartOf="@+id/profilTitle" />
+
+        <ImageView
+            android:id="@+id/profilText"
+            android:layout_width="195dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/profilTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profilTitle"
+            app:srcCompat="@drawable/profiltext" />
+
+        <TextView
+            android:id="@+id/myName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Max Mustermann"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/profilTitle"
+            app:layout_constraintEnd_toEndOf="@+id/profilTitle"
+            app:layout_constraintHorizontal_bias="0.182"
+            app:layout_constraintStart_toEndOf="@+id/profile_image" />
+
+        <ImageButton
+            android:id="@+id/editProfileB"
+            android:layout_width="195dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilTitle"
+            app:srcCompat="@drawable/editprofil" />
+
+        <ImageButton
+            android:id="@+id/shareProfileB"
+            android:layout_width="195dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilTitle"
+            app:srcCompat="@drawable/shareprofil" />
+
+        <ImageButton
+            android:id="@+id/createNftB"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/createnft" />
+
+        <ImageButton
+            android:id="@+id/logOut"
+            android:layout_width="135dp"
+            android:layout_height="75dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilText"
+            app:srcCompat="@drawable/logout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </layout>

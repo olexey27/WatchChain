@@ -1,112 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    android:id="@+id/CollectorCard"
-    android:layout_width="196dp"
-    android:layout_height="265dp"
-    android:layout_margin="5dp"
-    android:alpha="1"
-    app:cardBackgroundColor="#ff0000"
-    app:cardCornerRadius="29dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/CollectorCard"
+        android:layout_width="196dp"
+        android:layout_height="265dp"
+        android:layout_margin="5dp"
+        android:alpha="1"
+        app:cardBackgroundColor="#ff0000"
+        app:cardCornerRadius="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/CollectorLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/nftframe">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CollectorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nftframe">
 
-        <ImageView
-            android:id="@+id/nft_image1"
-            android:layout_width="98dp"
-            android:layout_height="78dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/img3683" />
+            <ImageView
+                android:id="@+id/nft_image1"
+                android:layout_width="98dp"
+                android:layout_height="78dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/img3683" />
 
-        <ImageView
-            android:id="@+id/nft_image2"
-            android:layout_width="98dp"
-            android:layout_height="78dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nft_image1"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/img8922" />
+            <ImageView
+                android:id="@+id/nft_image2"
+                android:layout_width="98dp"
+                android:layout_height="78dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nft_image1"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/img8922" />
 
-        <ImageView
-            android:id="@+id/nft_image3"
-            android:layout_width="98dp"
-            android:layout_height="156dp"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/img9611" />
+            <ImageView
+                android:id="@+id/nft_image3"
+                android:layout_width="98dp"
+                android:layout_height="156dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/img9611" />
 
-        <TextView
-            android:id="@+id/collection_name"
-            android:layout_width="190dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nft_image2"
-            tools:text="@string/collection1" />
+            <TextView
+                android:id="@+id/collection_name"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nft_image2"
+                tools:text="@string/collection1" />
 
-        <TextView
-            android:id="@+id/id_collectore_view"
-            android:layout_width="125dp"
-            android:layout_height="50dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/collector1"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/image_logo"
-            app:layout_constraintTop_toBottomOf="@+id/collection_name"
-            app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/id_collectore_view"
+                android:layout_width="125dp"
+                android:layout_height="50dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/collector1"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/image_logo"
+                app:layout_constraintTop_toBottomOf="@+id/collection_name"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
-            android:id="@+id/image_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/collection_name"
-            app:layout_constraintTop_toBottomOf="@+id/collection_name"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/logo" />
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/collection_name"
+                app:layout_constraintTop_toBottomOf="@+id/collection_name"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/logo" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
 

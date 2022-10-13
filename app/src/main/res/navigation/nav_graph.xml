@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_collectorFragment_to_nftFragment"
             app:destination="@id/nftFragment" />
+        <argument
+            android:name="collectorName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/nftFragment"
@@ -47,4 +50,12 @@
         android:id="@+id/favoriteFragment"
         android:name="com.example.watchchain.ui.FavoriteFragment"
         android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.watchchain.ui.WalletFragment"
+        android:label="WalletFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.watchchain.ui.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>

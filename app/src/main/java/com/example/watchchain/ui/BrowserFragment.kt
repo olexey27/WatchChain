@@ -4,19 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.SnapHelper
-import com.example.watchchain.R
 import com.example.watchchain.adapter.CollectorAdapter
 import com.example.watchchain.databinding.FragmentBrowserBinding
 import com.example.watchchain.ui.authentication.ApiStatus
 import com.example.watchchain.ui.authentication.MainViewModel
 
-private const val TAG = "BrowserFragment"
 
 class BrowserFragment : Fragment() {
 
@@ -30,22 +27,18 @@ class BrowserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_browser, container, false)
-
+        binding = FragmentBrowserBinding.inflate(inflater,container,false)
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        val collectorAdapter = CollectorAdapter(requireContext())
-
-        binding.nftList.adapter = collectorAdapter
+        super.onViewCreated(view, savedInstanceState)
 
         viewModel.nfts.observe(
             viewLifecycleOwner,
             Observer {
-                collectorAdapter.submitList(it)
+                binding.collectorViewBrowser.adapter = CollectorAdapter(it)
             }
         )
 
@@ -63,6 +56,6 @@ class BrowserFragment : Fragment() {
             }
         )
         val snapHelper: SnapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(binding.nftList)
+        snapHelper.attachToRecyclerView(binding.collectorViewBrowser)
     }
 }

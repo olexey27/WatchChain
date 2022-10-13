@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.watchchain.data.Repository
+import com.example.watchchain.data.datamodels.Nft
 import com.example.watchchain.data.local.getDatabase
 import com.example.watchchain.data.remote.NftApi
 import com.google.firebase.auth.FirebaseAuth
@@ -20,11 +21,35 @@ enum class ApiStatus {LOADING, ERROR, DONE}
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val database = getDatabase(application)
+    //private val database = getDatabase(application)
 
-    private val repository = Repository(NftApi, database)
+    //private val repository = Repository(NftApi, database)
+    private val repository = Repository(NftApi)
 
-    val nfts = repository.nftList
+    //Die Nfts und die Favoriten werden in einer Live Variablen gespeichert
+    val nfts = repository.collectors
+    //val favoriteNft = repository.favoriteNft
+
+    /*private val _favoriteNft = MutableLiveData<List<Nft>>()
+    val favoriteNft: LiveData<List<Nft>>
+        get() = _favoriteNft
+
+    init {
+        addNftToFavorite()
+    }
+
+    /**
+     * Eine Funktion um einen Nft zu den Favoriten hinzuzufügen
+     */
+    private fun addNftToFavorite(nft: Nft) {
+        val favorite = _favoriteNft.value
+        val newNft = mutableListOf(nft)
+        if (favorite != null) {
+            newNft.addAll(favorite.toTypedArray())
+        }
+        _favoriteNft.value = newNft
+    }*/
+
 
     private val _loading = MutableLiveData<ApiStatus>()
     val loading: LiveData<ApiStatus>
@@ -33,6 +58,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     init {
         loadData()
     }
+
 
     private fun loadData() {
         viewModelScope.launch {

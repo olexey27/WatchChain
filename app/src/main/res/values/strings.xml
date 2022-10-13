@@ -106,6 +106,8 @@
     <string name="price39">28,99</string>
     <string name="price40">25</string>
 
+    <string name="share_text">Profil teilen</string>
+
     <string name="buy_button">Buy</string>
 </resources>
 

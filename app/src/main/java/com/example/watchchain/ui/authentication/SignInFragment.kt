@@ -10,11 +10,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.watchchain.R
-import com.example.watchchain.databinding.SignInBinding
+import com.example.watchchain.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
 
-    private lateinit var binding: SignInBinding
+    private lateinit var binding: FragmentSignInBinding
 
     private val viewModel: MainViewModel by activityViewModels()
 
@@ -23,7 +23,7 @@ class SignInFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.sign_in, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sign_in, container, false)
 
         return binding.root
     }
@@ -31,14 +31,14 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.signUpTextButton.setOnClickListener {
+        binding.signUpButton.setOnClickListener {
             findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToCreateAccountFragment())
         }
 
 
         binding.signInButton.setOnClickListener {
-            val email = binding.emailAddressEdit.text.toString()
-            val password = binding.passwordText.text.toString()
+            val email = binding.signInEmailEdit.text.toString()
+            val password = binding.signInPassword.text.toString()
 
             if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
                 viewModel.signUp(email, password)
@@ -49,7 +49,7 @@ class SignInFragment : Fragment() {
             viewLifecycleOwner,
             Observer {
                 if (it != null) {
-                    findNavController().navigate(R.id.mainFragment)
+                    findNavController().navigate(R.id.browserFragment)
                 }
             }
         )

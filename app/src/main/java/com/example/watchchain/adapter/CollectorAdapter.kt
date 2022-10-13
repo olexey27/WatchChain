@@ -1,33 +1,27 @@
 package com.example.watchchain.adapter
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.watchchain.data.datamodels.Nft
+import com.example.watchchain.data.datamodels.Collector
 import com.example.watchchain.databinding.CollectorItemBinding
 import com.example.watchchain.ui.BrowserFragmentDirections
 
 class CollectorAdapter(
-    private val context: Context,
+    private val dataset: List<Collector>,
+    //private val addNftToFavorite: (Nft) -> Unit
 ) : RecyclerView.Adapter<CollectorAdapter.ItemViewHolder>() {
 
-    private var dataset = emptyList<Nft>()
+    //private var dataset = emptyList<Nft>()
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun submitList(list: List<Nft>) {
-        dataset = list
-        notifyDataSetChanged()
-    }
 
-    class ItemViewHolder(val binding: CollectorItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class ItemViewHolder (val binding: CollectorItemBinding) : RecyclerView.ViewHolder(binding.root)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-
         val binding = CollectorItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return ItemViewHolder(binding)
@@ -36,23 +30,22 @@ class CollectorAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
 
-        val imgUri = item.nftImage.toUri().buildUpon().scheme("http").build()
+        val imgUri = item.collectorLogo.toUri().buildUpon().scheme("http").build()
+        val imgUri1 = item.collection[0].nftImage.toUri().buildUpon().scheme("http").build()
+        val imgUri2 = item.collection[1].nftImage.toUri().buildUpon().scheme("http").build()
+        val imgUri3 = item.collection[2].nftImage.toUri().buildUpon().scheme("http").build()
 
-        holder.binding.nftImage1.load(imgUri)
-        holder.binding.nftImage2.load(imgUri)
-        holder.binding.nftImage3.load(imgUri)
+
         holder.binding.collectionName.text = item.collectionName
         holder.binding.idCollectoreView.text = item.collectorName
-
-        val imgUri2 = item.collectorLogo.toUri().buildUpon().scheme("http").build()
-
-        holder.binding.imageLogo.load(imgUri2)
-
+        holder.binding.imageLogo.load(imgUri)
+        holder.binding.nftImage1.load(imgUri1)
+        holder.binding.nftImage2.load(imgUri2)
+        holder.binding.nftImage3.load(imgUri3)
         holder.binding.CollectorCard.setOnClickListener {
             holder.itemView.findNavController()
-                .navigate(BrowserFragmentDirections.actionBrowserFragmentToCollectorFragment())
+                .navigate(BrowserFragmentDirections.actionBrowserFragmentToCollectorFragment(item.collectorName))
         }
-
     }
 
 
@@ -66,6 +59,7 @@ class CollectorAdapter(
         val priceView: TextView = view.findViewById(R.id.price_view)
         val imageView: ImageView = view.findViewById(R.id.nft_view)
         val cardView: CardView = view.findViewById(R.id.nft_cardView)
+        val favoriteButton: ImageButton = view.findViewById(R.id.favoriteImage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -88,6 +82,9 @@ class CollectorAdapter(
         holder.cardView.setOnClickListener {
             val navController = holder.view.findNavController()
             navController.navigate(CollectorFragmentDirections.actionCollectorFragmentToNftFragment())
+        }
+        holder.ImageButton.setOnClickListener {
+        addNftToFavorite(item
         }
     }*/
 

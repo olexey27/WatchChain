@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.bottomNavigation
 
         // Hier wird der Nav Controller zugewiesen und die Action Bar damit eingerichtet
-        navController = findNavController(R.id.fragmentMain)
+        navController = findNavController(R.id.mainActivity)
         NavigationUI.setupActionBarWithNavController(this, navController)
 
         // Richtet die Navigation Bar ein, sodass sie mit dem Nav Controller verknüpft ist
