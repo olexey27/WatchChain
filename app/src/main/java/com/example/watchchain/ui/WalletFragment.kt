@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.watchchain.R
+import com.example.watchchain.databinding.FragmentWalletBinding
 import com.example.watchchain.ui.authentication.MainViewModel
 
 class WalletFragment : Fragment() {

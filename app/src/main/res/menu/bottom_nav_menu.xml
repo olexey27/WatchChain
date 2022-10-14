@@ -7,13 +7,13 @@
         android:title="Wallet" />
 
     <item
-        android:id="@+id/collectorFragment"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profil" />
 
     <item
-        android:id="@+id/favoriteFragment"
+        android:id="@+id/browserFragment"
         android:icon="@drawable/ic_baseline_collections_24"
-        android:title="Favorite" />
+        android:title="Browser" />
 
 </menu>

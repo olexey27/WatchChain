@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.watchchain.MainActivity
 import com.example.watchchain.R
+import com.example.watchchain.databinding.ActivityMainBinding
 import com.example.watchchain.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
@@ -17,6 +19,12 @@ class SignInFragment : Fragment() {
     private lateinit var binding: FragmentSignInBinding
 
     private val viewModel: MainViewModel by activityViewModels()
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        (activity as MainActivity).hidebottomBar()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +39,7 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.signUpButton.setOnClickListener {
             findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToCreateAccountFragment())
         }
@@ -41,7 +50,7 @@ class SignInFragment : Fragment() {
             val password = binding.signInPassword.text.toString()
 
             if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
-                viewModel.signUp(email, password)
+                viewModel.login(email, password)
             }
         }
 

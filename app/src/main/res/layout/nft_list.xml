@@ -1,102 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nft_cardView"
-    android:layout_width="196dp"
-    android:layout_height="265dp"
-    android:layout_margin="4dp"
-    app:barrierMargin="4dp"
-    app:cardBackgroundColor="#606060"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="10dp"
-    app:cardPreventCornerOverlap="false"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="93dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/nft_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <data>
 
-        <ImageView
-            android:id="@+id/nft_image"
-            android:layout_width="0dp"
-            android:layout_height="165dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/img3683" />
+    </data>
 
-        <TextView
-            android:id="@+id/nft_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:text="@string/nft1"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/nft_image"
-            app:layout_constraintTop_toBottomOf="@+id/nft_image"
-            app:layout_constraintVertical_bias="0.0" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/nft_cardView"
+        android:layout_width="196dp"
+        android:layout_height="265dp"
+        android:layout_margin="4dp"
+        app:barrierMargin="4dp"
+        app:cardBackgroundColor="#606060"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="93dp">
 
-        <TextView
-            android:id="@+id/price_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Price"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/nft_name"
-            app:layout_constraintTop_toBottomOf="@+id/nft_name" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nft_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/ethereum"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="6dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/price_text"
-            app:layout_constraintTop_toBottomOf="@+id/price_text"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ethereum" />
+            <ImageView
+                android:id="@+id/nft_image"
+                android:layout_width="0dp"
+                android:layout_height="165dp"
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/img3683" />
 
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/price1"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/ethereum"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/ethereum" />
+            <TextView
+                android:id="@+id/nft_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/nft1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/nft_image"
+                app:layout_constraintTop_toBottomOf="@+id/nft_image"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <ImageButton
-            android:id="@+id/favoritImage"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nft_image"
-            app:srcCompat="@drawable/ic_baseline_favorite_24" />
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Price"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/nft_name"
+                app:layout_constraintTop_toBottomOf="@+id/nft_name" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/ethereum"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/price_text"
+                app:layout_constraintTop_toBottomOf="@+id/price_text"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ethereum" />
 
-</com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/price1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ethereum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/ethereum" />
+
+            <ImageButton
+                android:id="@+id/favoritImage"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nft_image"
+                app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

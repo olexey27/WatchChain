@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import com.example.watchchain.R
 import com.example.watchchain.databinding.FragmentProfileBinding
 import com.example.watchchain.ui.authentication.MainViewModel
 
@@ -35,6 +38,14 @@ class ProfileFragment : Fragment() {
             val shareIntent = Intent.createChooser(intent, null)
             startActivity(shareIntent)
         }
+        viewModel.currentUser.observe(
+            viewLifecycleOwner,
+            Observer {
+                if (it == null) {
+                    findNavController().navigate(R.id.signInFragment)
+                }
+            }
+        )
 
         binding.logOut.setOnClickListener {
             viewModel.logout()

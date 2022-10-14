@@ -3,6 +3,7 @@ package com.example.watchchain
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -48,5 +49,12 @@ class MainActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
             )
         }
+    }
+    fun hidebottomBar() {
+        binding.bottomNavigation.visibility = View.GONE
+    }
+
+    fun showBottomBar() {
+        binding.bottomNavigation.visibility = View.VISIBLE
     }
 }

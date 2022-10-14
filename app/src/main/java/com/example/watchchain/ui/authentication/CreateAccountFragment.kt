@@ -59,7 +59,7 @@ class CreateAccountFragment : Fragment() {
 
 
         if (!email.isNullOrEmpty() && !password1.isNullOrEmpty() && password1 == password2) {
-            viewModel.signUp(email, password1,)
+            viewModel.signUp(email, password1)
         }
     }
 }

@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.SnapHelper
+import com.example.watchchain.MainActivity
+import com.example.watchchain.R
 import com.example.watchchain.adapter.CollectorAdapter
 import com.example.watchchain.databinding.FragmentBrowserBinding
 import com.example.watchchain.ui.authentication.ApiStatus
@@ -21,6 +24,12 @@ class BrowserFragment : Fragment() {
     private lateinit var binding: FragmentBrowserBinding
 
     private val viewModel: MainViewModel by activityViewModels()
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        (activity as MainActivity).showBottomBar()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +44,15 @@ class BrowserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.currentUser.observe(
+            viewLifecycleOwner,
+            Observer {
+                if (it == null) {
+                    findNavController().navigate(R.id.signInFragment)
+                }
+            }
+        )
 
         viewModel.nfts.observe(
             viewLifecycleOwner,

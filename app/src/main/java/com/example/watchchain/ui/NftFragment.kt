@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import coil.load
 import com.example.watchchain.R
 import com.example.watchchain.databinding.FragmentNftBinding
 import com.example.watchchain.ui.authentication.MainViewModel
 
-private const val TAG = "NftFragment"
 
 class NftFragment : Fragment() {
 
@@ -21,11 +21,15 @@ class NftFragment : Fragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
 
-    var nft = ""
+    var nftName = ""
+    var collectionName = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let { nft = "nftName" }
+        arguments?.let {
+            nftName = it.getString("nftName").toString()
+            collectionName = it.getString("collectionName").toString()
+            }
     }
 
     override fun onCreateView(
@@ -38,5 +42,24 @@ class NftFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.nfts.observe(
+            viewLifecycleOwner,
+            Observer { list ->
+                val collection = list.find { it.collectionName == collectionName }
+                if (collection != null) {
+                    val nft = collection.collection.find { it.nftName == nftName }
+                    if (nft != null) {
+                        binding.nftName.text = nft.nftName
+                        binding.priceText.text = nft.nftPrice
+
+                        val imgUri = nft.nftImage.toUri().buildUpon().scheme("https").build()
+                        binding.nftImage.load(imgUri)
+                    }
+                }
+            }
+        )
+
     }
 }

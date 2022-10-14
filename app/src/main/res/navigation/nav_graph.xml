@@ -46,11 +46,10 @@
         <argument
             android:name="nftName"
             app:argType="string" />
+        <argument
+            android:name="collectionName"
+            app:argType="string" />
     </fragment>
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.watchchain.MainActivity"
-        android:label="MainActivity" />
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.watchchain.ui.FavoriteFragment"

@@ -8,8 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".DetailActivity">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/background_image"
@@ -26,7 +25,6 @@
 
 
         <ImageView
-
             android:id="@+id/nftImage"
             android:layout_width="0dp"
             android:layout_height="400dp"
@@ -43,10 +41,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.109"
-            app:srcCompat="@drawable/img3683">
+            app:srcCompat="@drawable/img3683" />
 
-
-        </ImageView>
 
         <TextView
             android:id="@+id/nftName"

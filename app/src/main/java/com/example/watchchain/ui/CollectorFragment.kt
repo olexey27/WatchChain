@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import coil.load
 import com.example.watchchain.adapter.CollectorAdapter
+import com.example.watchchain.adapter.CreatorAdapter
 import com.example.watchchain.databinding.FragmentCollectorBinding
 import com.example.watchchain.ui.authentication.MainViewModel
 
@@ -43,7 +44,9 @@ class CollectorFragment : Fragment() {
             Observer {
                 list ->
                 val collection = list.find { it.collectorName == collector }
-                binding.nftsRecycler.adapter = CollectorAdapter(collection)
+                if (collection != null) {
+                    binding.nftsRecycler.adapter = CreatorAdapter(collection.collection, collection.collectionName)
+                }
 
                 binding.collectionName.text = collection!!.collectionName
 
