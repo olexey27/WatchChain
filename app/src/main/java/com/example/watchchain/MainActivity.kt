@@ -4,10 +4,9 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.watchchain.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -35,8 +34,7 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.bottomNavigation
 
         // Hier wird der Nav Controller zugewiesen und die Action Bar damit eingerichtet
-        navController = findNavController(R.id.mainActivity)
-        NavigationUI.setupActionBarWithNavController(this, navController)
+        navController = findNavController(R.id.navFragment)
 
         // Richtet die Navigation Bar ein, sodass sie mit dem Nav Controller verknüpft ist
         navView.setupWithNavController(navController)

@@ -22,6 +22,8 @@ class Repository(private val nftApi: NftApi) {
     suspend fun getNfts() {
         val newList = nftApi.retrofitService.getNfts()
 
+        _collectors.value = newList
+
         //database.nftsDatabaseDao.deleteAll()
 
         //database.nftsDatabaseDao.insertNfts(newList)

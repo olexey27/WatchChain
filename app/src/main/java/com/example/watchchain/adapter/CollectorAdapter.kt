@@ -11,7 +11,7 @@ import com.example.watchchain.databinding.CollectorItemBinding
 import com.example.watchchain.ui.BrowserFragmentDirections
 
 class CollectorAdapter(
-    private val dataset: List<Collector>,
+    private val dataset: List<Collector>
     //private val addNftToFavorite: (Nft) -> Unit
 ) : RecyclerView.Adapter<CollectorAdapter.ItemViewHolder>() {
 
@@ -30,10 +30,10 @@ class CollectorAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
 
-        val imgUri = item.collectorLogo.toUri().buildUpon().scheme("http").build()
-        val imgUri1 = item.collection[0].nftImage.toUri().buildUpon().scheme("http").build()
-        val imgUri2 = item.collection[1].nftImage.toUri().buildUpon().scheme("http").build()
-        val imgUri3 = item.collection[2].nftImage.toUri().buildUpon().scheme("http").build()
+        val imgUri = item.collectorLogo.toUri().buildUpon().scheme("https").build()
+        val imgUri1 = item.collection[0].nftImage.toUri().buildUpon().scheme("https").build()
+        val imgUri2 = item.collection[1].nftImage.toUri().buildUpon().scheme("https").build()
+        val imgUri3 = item.collection[2].nftImage.toUri().buildUpon().scheme("https").build()
 
 
         holder.binding.collectionName.text = item.collectionName

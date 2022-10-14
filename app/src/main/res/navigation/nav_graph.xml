@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/browserFragment">
 
@@ -11,7 +12,7 @@
     <fragment
         android:id="@+id/browserFragment"
         android:name="com.example.watchchain.ui.BrowserFragment"
-        android:label="BrowserFragment" >
+        android:label="BrowserFragment">
         <action
             android:id="@+id/action_browserFragment_to_collectorFragment"
             app:destination="@id/collectorFragment" />
@@ -22,7 +23,7 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.watchchain.ui.authentication.SignInFragment"
-        android:label="SignInFragment" >
+        android:label="SignInFragment">
         <action
             android:id="@+id/action_signInFragment_to_createAccountFragment"
             app:destination="@id/createAccountFragment" />
@@ -30,7 +31,7 @@
     <fragment
         android:id="@+id/collectorFragment"
         android:name="com.example.watchchain.ui.CollectorFragment"
-        android:label="CollectorFragment" >
+        android:label="CollectorFragment">
         <action
             android:id="@+id/action_collectorFragment_to_nftFragment"
             app:destination="@id/nftFragment" />
@@ -41,7 +42,11 @@
     <fragment
         android:id="@+id/nftFragment"
         android:name="com.example.watchchain.ui.NftFragment"
-        android:label="NftFragment" />
+        android:label="NftFragment" >
+        <argument
+            android:name="nftName"
+            app:argType="string" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.watchchain.MainActivity"
@@ -49,13 +54,16 @@
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.watchchain.ui.FavoriteFragment"
-        android:label="FavoriteFragment" />
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite"/>
     <fragment
         android:id="@+id/walletFragment"
         android:name="com.example.watchchain.ui.WalletFragment"
-        android:label="WalletFragment" />
+        android:label="WalletFragment"
+        tools:layout="@layout/fragment_wallet"/>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.watchchain.ui.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
 </navigation>

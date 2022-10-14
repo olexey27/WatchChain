@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_wallet"
+        android:id="@+id/walletFragment"
         android:icon="@drawable/ic_baseline_account_balance_wallet_24"
         android:title="Wallet" />
 
     <item
-        android:id="@+id/navigation_collector"
+        android:id="@+id/collectorFragment"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profil" />
 
     <item
-        android:id="@+id/navigation_Favorite"
+        android:id="@+id/favoriteFragment"
         android:icon="@drawable/ic_baseline_collections_24"
         android:title="Favorite" />
 

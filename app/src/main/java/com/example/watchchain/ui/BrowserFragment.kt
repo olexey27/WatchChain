@@ -1,6 +1,7 @@
 package com.example.watchchain.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +40,7 @@ class BrowserFragment : Fragment() {
             viewLifecycleOwner,
             Observer {
                 binding.collectorViewBrowser.adapter = CollectorAdapter(it)
+                Log.d("BrowserFragment","Observer List $it")
             }
         )
 
