@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showBottomBar() {
+
         binding.bottomNavigation.visibility = View.VISIBLE
     }
 }

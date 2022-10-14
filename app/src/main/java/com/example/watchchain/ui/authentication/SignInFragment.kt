@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -11,7 +12,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.watchchain.MainActivity
 import com.example.watchchain.R
-import com.example.watchchain.databinding.ActivityMainBinding
 import com.example.watchchain.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
@@ -62,5 +62,14 @@ class SignInFragment : Fragment() {
                 }
             }
         )
+        binding.googleImageButton.setOnClickListener() {
+            Toast.makeText(context,R.string.error, Toast.LENGTH_LONG).show()
+        }
+        binding.facebookImageButton.setOnClickListener() {
+            Toast.makeText(context,R.string.error, Toast.LENGTH_LONG).show()
+        }
+        binding.appleImageButton.setOnClickListener() {
+            Toast.makeText(context,R.string.error, Toast.LENGTH_LONG).show()
+        }
     }
 }

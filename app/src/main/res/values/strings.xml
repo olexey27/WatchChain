@@ -109,5 +109,8 @@
     <string name="share_text">Profil teilen</string>
 
     <string name="buy_button">Buy</string>
+
+    <string name="buy_nft">Thank you for your NFT purchase 🖼</string>
+    <string name="error">🚩 Is still under development !!!</string>
 </resources>
 

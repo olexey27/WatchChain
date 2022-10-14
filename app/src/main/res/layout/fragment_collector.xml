@@ -12,17 +12,6 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/app_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/background" />
-
-        <ImageView
             android:id="@+id/title_background"
             android:layout_width="0dp"
             android:layout_height="300dp"
@@ -37,8 +26,8 @@
 
         <ImageView
             android:id="@+id/profil_picture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_marginBottom="50dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@+id/title_background"

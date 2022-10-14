@@ -19,34 +19,11 @@ enum class ApiStatus {LOADING, ERROR, DONE}
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
-    //private val database = getDatabase(application)
 
-    //private val repository = Repository(NftApi, database)
     private val repository = Repository(NftApi)
 
     //Die Nfts und die Favoriten werden in einer Live Variablen gespeichert
     val nfts = repository.collectors
-    //val favoriteNft = repository.favoriteNft
-
-    /*private val _favoriteNft = MutableLiveData<List<Nft>>()
-    val favoriteNft: LiveData<List<Nft>>
-        get() = _favoriteNft
-
-    init {
-        addNftToFavorite()
-    }
-
-    /**
-     * Eine Funktion um einen Nft zu den Favoriten hinzuzufügen
-     */
-    private fun addNftToFavorite(nft: Nft) {
-        val favorite = _favoriteNft.value
-        val newNft = mutableListOf(nft)
-        if (favorite != null) {
-            newNft.addAll(favorite.toTypedArray())
-        }
-        _favoriteNft.value = newNft
-    }*/
 
 
     private val _loading = MutableLiveData<ApiStatus>()
@@ -86,7 +63,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val currentUser: LiveData<FirebaseUser?>
     get() = _currentUser
 
-
     // hier wird versucht einen User zu erstellen um diesen anschließend auch gleich einzuloggen
     fun signUp(email: String, password: String) {
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
@@ -96,10 +72,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 Log.e(TAG, "SignUp failed: ${it.exception}")
             }
         }
-    }
-
-    fun facebookLogin() {
-        firebaseAuth
     }
 
     fun login(email: String, password: String) {

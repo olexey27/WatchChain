@@ -29,13 +29,13 @@
             android:id="@+id/sign_in_email_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="80dp"
             android:ems="12"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="@+id/logo_title"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.500"
             app:layout_constraintStart_toStartOf="@+id/logo_title"
             app:layout_constraintTop_toBottomOf="@+id/logo_title" />
 
@@ -43,7 +43,7 @@
             android:id="@+id/confirm_password_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="50dp"
             android:ems="12"
             android:hint="Confirm Password"
             android:inputType="textPassword"
@@ -57,7 +57,7 @@
             android:id="@+id/password_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="50dp"
             android:ems="12"
             android:hint="Password"
             android:inputType="textPassword"
@@ -102,7 +102,7 @@
             android:id="@+id/have_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
+            android:layout_marginStart="80dp"
             android:layout_marginBottom="27dp"
             android:text="Already have an account?"
             android:textSize="16sp"
@@ -113,7 +113,7 @@
             android:id="@+id/sign_in_textButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="84dp"
+            android:layout_marginEnd="80dp"
             android:layout_marginBottom="27dp"
             android:text="Sign In"
             android:textSize="16sp"
@@ -125,25 +125,13 @@
             android:id="@+id/create_AccountButton"
             android:layout_width="0dp"
             android:layout_height="70dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:backgroundTint="#00FFFFFF"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="@+id/confirm_password_edit"
             app:layout_constraintStart_toStartOf="@+id/confirm_password_edit"
             app:layout_constraintTop_toBottomOf="@+id/confirm_password_edit"
             app:srcCompat="@drawable/createacc" />
-
-        <ImageButton
-            android:id="@+id/signup_cancel"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/backbutton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -10,9 +10,9 @@
     <com.google.android.material.card.MaterialCardView
 
         android:id="@+id/CollectorCard"
-        android:layout_width="196dp"
+        android:layout_width="190dp"
         android:layout_height="265dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
         android:alpha="1"
         app:cardBackgroundColor="#ff0000"
         app:cardCornerRadius="29dp"
@@ -74,7 +74,7 @@
                 android:id="@+id/collection_name"
                 android:layout_width="190dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAllCaps="false"
@@ -96,7 +96,7 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/image_logo"
                 app:layout_constraintTop_toBottomOf="@+id/collection_name"
                 app:layout_constraintVertical_bias="0.0" />
@@ -105,7 +105,7 @@
                 android:id="@+id/image_logo"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/collection_name"

@@ -1,10 +1,10 @@
 package com.example.watchchain.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -53,13 +53,14 @@ class NftFragment : Fragment() {
                     if (nft != null) {
                         binding.nftName.text = nft.nftName
                         binding.priceText.text = nft.nftPrice
-
                         val imgUri = nft.nftImage.toUri().buildUpon().scheme("https").build()
                         binding.nftImage.load(imgUri)
                     }
                 }
             }
         )
-
+        binding.buyButton.setOnClickListener() {
+            Toast.makeText(context,R.string.buy_nft,Toast.LENGTH_LONG).show()
+        }
     }
 }

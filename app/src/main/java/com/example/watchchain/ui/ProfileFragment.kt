@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -49,6 +50,13 @@ class ProfileFragment : Fragment() {
 
         binding.logOut.setOnClickListener {
             viewModel.logout()
+        }
+
+        binding.editProfileB.setOnClickListener() {
+            Toast.makeText(context,R.string.error, Toast.LENGTH_LONG).show()
+        }
+        binding.createNftB.setOnClickListener() {
+            Toast.makeText(context,R.string.error,Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -27,4 +28,26 @@ class WalletFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.receive.setOnClickListener() {
+            Toast.makeText(context,R.string.error, Toast.LENGTH_LONG).show()
+        }
+        binding.receiveImg.setOnClickListener() {
+            Toast.makeText(context,R.string.error,Toast.LENGTH_LONG).show()
+        }
+        binding.buyText.setOnClickListener() {
+            Toast.makeText(context,R.string.error,Toast.LENGTH_LONG).show()
+        }
+        binding.moneyImg.setOnClickListener() {
+            Toast.makeText(context,R.string.error,Toast.LENGTH_LONG).show()
+        }
+        binding.sendMoneyImg.setOnClickListener() {
+            Toast.makeText(context,R.string.error,Toast.LENGTH_LONG).show()
+        }
+        binding.sendMoney.setOnClickListener() {
+            Toast.makeText(context,R.string.error,Toast.LENGTH_LONG).show()
+        }
+    }
 }
