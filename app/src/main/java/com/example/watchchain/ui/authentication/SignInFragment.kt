@@ -18,7 +18,6 @@ class SignInFragment : Fragment() {
 
     private lateinit var binding: FragmentSignInBinding
 
-
     private val viewModel: MainViewModel by activityViewModels()
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
