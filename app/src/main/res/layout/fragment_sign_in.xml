@@ -28,7 +28,7 @@
             android:id="@+id/sign_in_email_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:ems="12"
             android:hint="Email"
             android:inputType="textPersonName"
@@ -115,6 +115,16 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/guest"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:text="Guest"
+            app:iconTint="#673AB7"
+            app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
+            app:layout_constraintStart_toStartOf="@+id/sign_in_button"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

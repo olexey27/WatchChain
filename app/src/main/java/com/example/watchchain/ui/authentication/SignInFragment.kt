@@ -31,10 +31,12 @@ class SignInFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sign_in, container, false)
 
         return binding.root
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,7 +46,6 @@ class SignInFragment : Fragment() {
             findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToCreateAccountFragment())
         }
 
-
         binding.signInButton.setOnClickListener {
             val email = binding.signInEmailEdit.text.toString()
             val password = binding.signInPassword.text.toString()
@@ -52,6 +53,9 @@ class SignInFragment : Fragment() {
             if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
                 viewModel.login(email, password)
             }
+        }
+        binding.guest.setOnClickListener {
+            findNavController().navigate(R.id.browserFragment)
         }
 
         viewModel.currentUser.observe(
